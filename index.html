@@ -30,24 +30,74 @@
 
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
 
-<!-- JSON-LD: LocalBusiness Schema -->
+<!-- JSON-LD: Organization Schema -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "LocalBusiness",
+  "@type": "Organization",
+  "@id": "https://greenstar-solar-demo.vercel.app/#organization",
+  "name": "Greenstar Solar Ltd",
+  "legalName": "Greenstar Solar Ltd",
+  "url": "https://greenstar-solar-demo.vercel.app/",
+  "logo": {
+    "@type": "ImageObject",
+    "url": "https://images.squarespace-cdn.com/content/v1/6694fdcb1d32b52f0eee1f8f/3aae973b-c7ca-4123-9e3e-a27eaf29bf6b/Greenstar Solar+Logo.png",
+    "width": 512,
+    "height": 512
+  },
+  "image": "https://images.squarespace-cdn.com/content/v1/6694fdcb1d32b52f0eee1f8f/3aae973b-c7ca-4123-9e3e-a27eaf29bf6b/Greenstar Solar+Logo.png",
+  "description": "Multi-disciplined electrical, solar PV, heating and construction company based in Portsmouth, serving Hampshire and Surrey. NAPIT, MCS, TrustMark & Checkatrade certified.",
+  "foundingDate": "2011",
+  "founder": {
+    "@type": "Person",
+    "name": "Grant",
+    "jobTitle": "Founder & Director"
+  },
+  "slogan": "Built on Trust, Powered by Expertise",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Fisher Lane",
+    "addressLocality": "Portsmouth",
+    "addressRegion": "Hampshire",
+    "postalCode": "PO15 5TU",
+    "addressCountry": "GB"
+  },
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "telephone": "+44-1243-786866",
+    "email": "info@greenstar-solar.co.uk",
+    "contactType": "Customer Service",
+    "availableLanguage": "English",
+    "areaServed": "GB"
+  },
+  "hasCredential": [
+    { "@type": "EducationalOccupationalCredential", "name": "NAPIT" },
+    { "@type": "EducationalOccupationalCredential", "name": "MCS" },
+    { "@type": "EducationalOccupationalCredential", "name": "TrustMark" },
+    { "@type": "EducationalOccupationalCredential", "name": "Checkatrade" }
+  ]
+}
+</script>
+
+<!-- JSON-LD: LocalBusiness / ProfessionalService Schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": ["LocalBusiness", "ProfessionalService", "HomeAndConstructionBusiness", "Electrician"],
   "@id": "https://greenstar-solar-demo.vercel.app/#business",
   "name": "Greenstar Solar Ltd",
-  "description": "Trusted electrical, solar PV, heating and construction services across Portsmouth and Portsmouth. NAPIT, MCS, TrustMark & Checkatrade certified.",
+  "description": "Trusted electrical, solar PV, heating and construction services across Portsmouth, Hampshire and Surrey. NAPIT, MCS, TrustMark & Checkatrade certified. Over 6,000 projects completed.",
   "url": "https://greenstar-solar-demo.vercel.app/",
-  "telephone": "+441243786866",
+  "telephone": "+44-1243-786866",
   "email": "info@greenstar-solar.co.uk",
+  "priceRange": "££",
   "foundingDate": "2011",
   "image": "https://images.squarespace-cdn.com/content/v1/6694fdcb1d32b52f0eee1f8f/3aae973b-c7ca-4123-9e3e-a27eaf29bf6b/Greenstar Solar+Logo.png",
   "address": {
     "@type": "PostalAddress",
-    "streetAddress": "Greenstar Solar",
+    "streetAddress": "Fisher Lane",
     "addressLocality": "Portsmouth",
-    "addressRegion": "Portsmouth",
+    "addressRegion": "Hampshire",
     "postalCode": "PO15 5TU",
     "addressCountry": "GB"
   },
@@ -62,23 +112,19 @@
     "opens": "08:00",
     "closes": "17:00"
   },
-  "areaServed": {
-    "@type": "GeoCircle",
-    "geoMidpoint": {
-      "@type": "GeoCoordinates",
-      "latitude": 50.8365,
-      "longitude": -0.7792
-    },
-    "geoRadius": "40000"
-  },
+  "areaServed": [
+    { "@type": "AdministrativeArea", "name": "Hampshire" },
+    { "@type": "AdministrativeArea", "name": "Surrey" },
+    { "@type": "City", "name": "Portsmouth" }
+  ],
   "hasOfferCatalog": {
     "@type": "OfferCatalog",
     "name": "Services",
     "itemListElement": [
-      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Electrical Services"}},
-      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Heating Systems"}},
-      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Solar PV & Renewables"}},
-      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Construction & Refurbishment"}}
+      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Electrical Services", "description": "Domestic and commercial electrical installations, rewires, EV charger installation, fuse board upgrades."}},
+      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Heating Systems", "description": "Modern heating system design and installation including infrared, heat pumps and traditional systems."}},
+      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Solar PV & Renewables", "description": "MCS-accredited solar PV design, installation, battery storage and renewable energy systems."}},
+      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Construction & Refurbishment", "description": "Full property construction, extensions and refurbishment delivered by an in-house team."}}
     ]
   },
   "aggregateRating": {
@@ -87,10 +133,26 @@
     "bestRating": "5",
     "ratingCount": "312"
   },
-  "sameAs": [
-    "#",
-    "#"
+  "hasCredential": [
+    { "@type": "EducationalOccupationalCredential", "name": "NAPIT" },
+    { "@type": "EducationalOccupationalCredential", "name": "MCS" },
+    { "@type": "EducationalOccupationalCredential", "name": "TrustMark" },
+    { "@type": "EducationalOccupationalCredential", "name": "Checkatrade" }
   ]
+}
+</script>
+
+<!-- JSON-LD: WebSite Schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "@id": "https://greenstar-solar-demo.vercel.app/#website",
+  "url": "https://greenstar-solar-demo.vercel.app/",
+  "name": "Greenstar Solar",
+  "description": "Electrical, Solar PV & Renewables in Portsmouth",
+  "publisher": { "@id": "https://greenstar-solar-demo.vercel.app/#organization" },
+  "inLanguage": "en-GB"
 }
 </script>
 
